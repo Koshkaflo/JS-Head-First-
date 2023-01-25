@@ -40,9 +40,9 @@ while (count > 0) {
 
 }
 
-// function
 
 
+// function bark
 
 function bark(name, weight) {
     if (weight > 20) {
@@ -51,7 +51,24 @@ function bark(name, weight) {
         console.log(name + ' says woof woof');
     }
 }
+
 bark('rover', 23);
 bark('spot', 13);
 bark('spike', 53);
 bark('lady', 17);
+
+// function whatShallWear
+
+function whatShallWear(temp) {
+    if (temp < 60) {
+        console.log('Wear a jacket');
+    } else if (temp < 70) {
+        console.log('Wear a sweather');
+    } else {
+        console.log('Wear a t-shirt');
+    }
+}
+
+whatShallWear(50);
+whatShallWear(80);
+whatShallWear(60);
