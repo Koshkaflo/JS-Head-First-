@@ -87,3 +87,47 @@ function calculateArea(r) {
 var radius = 5.2;
 var theArea = calculateArea(radius);
 console.log("The area is: " + theArea);
+
+
+
+
+// function clunk
+
+function clunk(times) {
+    var num = times;
+    while (num > 0) {
+        display('clunk');
+        num = num - 1;
+    }
+}
+
+// function thingamajig
+
+function thingamajig(size) {
+    var facky = 1;
+    clunkCounter = 0;
+    if (size == 0) {
+        display('clank');
+    } else if (size == 1) {
+        display('thunk');
+    } else {
+        while (size > 1) {
+            facky = facky * size;
+            size = size - 1;
+        }
+        clunk(facky);
+    }
+}
+
+// function display
+
+function display(output) {
+    console.log(output);
+    clunkCounter = clunkCounter + 1;
+}
+var clunkCounter = 0;
+thingamajig(5);
+console.log(clunkCounter);
+
+// данный код вычисляет факториал(подсчет комбинаций из полученного количества).
+// если передать чиисло 5, на консоль 120 раз выводится сообщение "clunk", после чего выводится число 120
