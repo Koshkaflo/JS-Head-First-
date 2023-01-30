@@ -7,15 +7,15 @@ function wakeUpUser() {
 
 // цикл While
 
-var scoops = 5;
+let scoops = 5;
 while (scoops > 0) {
     document.write("Another scoop!<br>");
     scoops = scoops - 1;
 }
 document.write("Life without ice cream isn't the same<br>");
 
-var i = 0;
-var name1 = "Joe";
+let i = 0;
+let name1 = "Joe";
 while (i < 2) {
     document.write("Happy Birthday to you. <br>");
     i = i + 1;
@@ -76,7 +76,7 @@ whatShallWear(60);
 // function calculateArea
 
 function calculateArea(r) {
-    var area;
+    let area;
     if (r <= 0) {
         return 0;
     } else {
@@ -84,8 +84,8 @@ function calculateArea(r) {
         return area;
     }
 }
-var radius = 5.2;
-var theArea = calculateArea(radius);
+let radius = 5.2;
+let theArea = calculateArea(radius);
 console.log("The area is: " + theArea);
 
 
@@ -94,7 +94,7 @@ console.log("The area is: " + theArea);
 // function clunk
 
 function clunk(times) {
-    var num = times;
+    let num = times;
     while (num > 0) {
         display('clunk');
         num = num - 1;
@@ -104,7 +104,7 @@ function clunk(times) {
 // function thingamajig
 
 function thingamajig(size) {
-    var facky = 1;
+    let facky = 1;
     clunkCounter = 0;
     if (size == 0) {
         display('clank');
@@ -125,7 +125,7 @@ function display(output) {
     console.log(output);
     clunkCounter = clunkCounter + 1;
 }
-var clunkCounter = 0;
+let clunkCounter = 0;
 thingamajig(5);
 console.log(clunkCounter);
 
