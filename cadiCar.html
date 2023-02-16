@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CadiCar</title>
+</head>
+<body>
+    <script>
+
+    let cadi = {
+        make: 'GM',
+        model: 'Cadillac',
+        year: 1955,
+        color: 'tan',
+        passengers: 5,
+        convertible: false,
+        mileage: 12892,
+        started: false,
+        start: function() {
+            this.started = true;
+        },
+        stop: function() {
+            this.started = false;
+        },
+        drive: function() {
+            if (this.started) {
+                alert('Zoom zoom!');
+            } else {
+                alert('You need to start the engine first');
+            }
+        }
+    };
+    cadi.drive();
+    cadi.start();
+    cadi.drive();
+    cadi.stop();
+
+    </script>
+</body>
+</html>
