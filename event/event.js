@@ -13,3 +13,10 @@ function showAnswer(eventObj) {
     name = 'pics/' + name + '.jpg';
     image.src = name;
 };
+
+
+//timer for alert 5sec
+function timerHandler() {
+    alert ('Click on any poster! Don`t sit there staring at a blank screen!');
+};
+setTimeout(timerHandler, 5000);
