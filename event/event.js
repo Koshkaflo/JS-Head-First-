@@ -1,9 +1,15 @@
 window.onload = init;
+
 function init() {
-    let image = document.getElementById('blur');
-    image.onclick = showAnswer;
+    let images = document.getElementsByTagName('img');
+    for (let i = 0; i < images.length; i++) {
+        images[i].onclick = showAnswer;
+    };
 };
-function showAnswer() {
-    let image = document.getElementById('blur');
-    image.src = '1poster.jpg';
-}
+
+function showAnswer(eventObj) {
+    let image = eventObj.target;
+    let name = image.id;
+    name = 'pics/' + name + '.jpg';
+    image.src = name;
+};
