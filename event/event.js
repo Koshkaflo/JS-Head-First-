@@ -5,5 +5,5 @@ function init() {
 };
 function showAnswer() {
     let image = document.getElementById('blur');
-    image.src = 'poster.jpg';
+    image.src = '1poster.jpg';
 }
