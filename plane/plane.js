@@ -60,9 +60,8 @@ function createDrinkOrder(passenger) {
         };
     } else if (passenger.ticket === 'premium') {
         orderFunction = function() {
-            alert('would you like wine, cola or water?')
-        }
-   
+            alert('Would you like wine, cola or water?')
+        };
     } else {
         orderFunction = function() {
             alert('Your choice is cola or water.')
@@ -71,11 +70,32 @@ function createDrinkOrder(passenger) {
     return orderFunction;
 };
 
+//function of dinner choice
+function createDinnerOrder(passenger) {
+    let orderFunction;
+    if (passenger.ticket === 'firstclass') {
+        orderFunction = function() {
+            alert('Would you like chicken or pasta?')
+        };
+    } else if (passenger.ticket === 'premium') {
+        orderFunction = function() {
+            alert('Would you like a snackbox or cheese plate?')
+        };
+    } else {
+        orderFunction = function() {
+            alert('Would you like peanuts or pretzels?')
+        };
+    };
+    return orderFunction;
+};
+    
+
 //serve customer 
 function serveCustomer(passenger) {
     let getDrinkOrderFunction = createDrinkOrder(passenger);
+    let getDinnerOrderFunction = createDinnerOrder(passenger);
     getDrinkOrderFunction();
-    //suggest lunch
+    getDinnerOrderFunction();
     getDrinkOrderFunction();
     getDrinkOrderFunction();
     //switch on movie
