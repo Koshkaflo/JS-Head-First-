@@ -2,7 +2,7 @@ let passengers = [
     {name: 'Jane Doloop', paid: true, ticket: 'coach'},
     {name: 'Dr.Evel', paid: true, ticket: 'firstclass'},
     {name: 'Sue Property', paid: false, ticket: 'firstclass'},
-    {name: 'John Funcall', paid: true, ticket: 'coach'}
+    {name: 'John Funcall', paid: true, ticket: 'premium'}
     ];
     
 //passenger enumeration function
@@ -58,6 +58,11 @@ function createDrinkOrder(passenger) {
         orderFunction = function() {
             alert('Would you like a coctail or wine?')
         };
+    } else if (passenger.ticket === 'premium') {
+        orderFunction = function() {
+            alert('would you like wine, cola or water?')
+        }
+   
     } else {
         orderFunction = function() {
             alert('Your choice is cola or water.')
