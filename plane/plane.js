@@ -1,8 +1,8 @@
 let passengers = [
-    {name: 'Jane Doloop', paid: true},
-    {name: 'Dr.Evel', paid: true},
-    {name: 'Sue Property', paid: false},
-    {name: 'John Funcall', paid: true}
+    {name: 'Jane Doloop', paid: true, ticket: 'coach'},
+    {name: 'Dr.Evel', paid: true, ticket: 'firstclass'},
+    {name: 'Sue Property', paid: false, ticket: 'firstclass'},
+    {name: 'John Funcall', paid: true, ticket: 'coach'}
     ];
     
 //passenger enumeration function
@@ -37,7 +37,7 @@ let allPaid = processPassengers(passengers, checkNotPaid);
       console.log('The plane can`t take off: not everyone has paid.')
     };
     
-    //paid or not paid passenger
+//paid or not paid passenger
 function printPassenger(passenger) {
     let message = passenger.name;
     if (passenger.paid === true) {
@@ -50,3 +50,30 @@ function printPassenger(passenger) {
 };
     
 processPassengers(passengers, printPassenger);
+
+//function of drink choice
+function createDrinkOrder(passenger) {
+    let orderFunction;
+    if (passenger.ticket === 'firstclass') {
+        orderFunction = function() {
+            alert('Would you like a coctail or wine?')
+        };
+    } else {
+        orderFunction = function() {
+            alert('Your choice is cola or water.')
+        };
+    };
+    return orderFunction;
+};
+
+//serve customer 
+function serveCustomer(passenger) {
+    let getDrinkOrderFunction = createDrinkOrder(passenger);
+    getDrinkOrderFunction();
+    //suggest lunch
+    getDrinkOrderFunction();
+    getDrinkOrderFunction();
+    //switch on movie
+    getDrinkOrderFunction();
+    //pick up trash
+};
