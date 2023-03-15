@@ -77,3 +77,12 @@ function serveCustomer(passenger) {
     getDrinkOrderFunction();
     //pick up trash
 };
+
+//passenger serve enumeration function
+function servePassengers(passengers) {
+    for (let i = 0; i < passengers.length; i++) {
+        serveCustomer(passengers[i]);
+    };
+};
+
+servePassengers(passengers);
