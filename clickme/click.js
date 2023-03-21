@@ -23,5 +23,5 @@ window.onload = function() {
     button.onclick = function () {
         count++;
         div.innerHTML = message + count + ' times';
-    }
+    };
 }
